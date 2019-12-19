@@ -131,7 +131,7 @@ function checkoutCode() {
         // Read `action` input parmeter
         const action = core.getInput('action');
         // Read `token` input parmeter
-        const token = core.getInput('token');
+        const token = core.getInput('pattoken');
         // If `action` input prameter is missing, return an error
         if (!action) {
             core.setFailed(`Missing 'action' input parameter`);
@@ -139,7 +139,7 @@ function checkoutCode() {
         }
         // If `token` input prameter is missing, return an error
         if (!token) {
-            core.setFailed(`Missing 'token' input parameter`);
+            core.setFailed(`Missing 'pattoken' input parameter`);
             return;
         }
         // Extract `ref` from `action`
